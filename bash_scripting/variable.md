@@ -90,4 +90,38 @@ echo 'Hello, $user'
 ```  
 Output:   
 Hello, Priyanshu  
-Hello, $user
+Hello, $user  
+
+## Let's do some fun with string:  
+```bash
+#!/bin/zsh
+
+secret="AGENT_PRIYANSHU"
+echo "Original: $secret" #will print original string
+echo "Code: ${#secret}" #will print string length
+```  
+```bash
+#!/bin/zsh
+
+secret="AGENT_PRIYANSHU"
+agent=${secret:6:9} #string slicing
+print "Identified agent: $agent" #output - PRIYANSHU
+```  
+### If else statement:  
+```bash
+#!/bin/zsh
+
+print -n "Enter your age: "
+read user_age
+if ((user_age >= 18)); then
+        print "You can drive"
+else
+        print "You are a minor, and cannot drive"
+fi
+``` 
+Output:  
+```Enter your age: 12  ```  
+```You are a minor, and cannot drive```  
+&  
+``` Enter your age: 21```  
+```You can drive ```  
